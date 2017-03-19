@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -62,3 +64,12 @@ gem 'friendly_id'
 
 gem 'devise'
 gem 'carrierwave'
+
+
+group :development do
+    gem 'capistrano',         require: false
+    gem 'capistrano-rvm',     require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
+end
