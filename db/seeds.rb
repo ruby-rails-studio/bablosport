@@ -1,6 +1,6 @@
 User.delete_all
 User.create!([
-  	{ email: 'admin@bablosport.ru', password: "password"}, 
+  	{ email: 'admin@bablosport.ru', password: "password", is_admin: true}, 
 ])
 
 Category.delete_all
