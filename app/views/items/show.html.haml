@@ -3,7 +3,7 @@
 .page-header
   %h1= @item.name
   - @item.landings.each do |lp|
-    = link_to lp.name, landing_path(lp), target: "_blank"
+    / = link_to lp.name, landing_path(lp), target: "_blank"
 
 %p
   = raw @item.description

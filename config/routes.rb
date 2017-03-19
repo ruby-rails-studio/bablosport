@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  root 'site#home'
 
   get 'rating'   => 'site#rating'
   get 'about'    => 'site#about'
@@ -8,26 +7,24 @@ Rails.application.routes.draw do
 
   # get 'lp/:id'   => 'landings#show'
 
-  # get '/', to: 'landings#show', constraints: { subdomain: ':id' }
-
-class Subdomain
-  def self.matches?(request)
-    request.subdomain.present? && request.subdomain != 'www'
+  class Subdomain
+    def self.matches?(request)
+      request.subdomain.present? && request.subdomain != 'www'
+    end
   end
-end
 
   constraints(Subdomain) do  
-    resource :landing, path: "/:id" do
+    resource :landing, only: "show", path: "/" do
       member do
-        get '/lp'   => 'landings#show'
+        get '/:id' => "landings#show"
       end
     end
   end
 
+  root 'site#home'
 
   resources :items
   resources :categories
-  resources :landings
 
   namespace :admin do
     root 'board#index'
