@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root 'site#home'
 
   get 'rating'   => 'site#rating'
   get 'about'    => 'site#about'
@@ -16,12 +17,11 @@ Rails.application.routes.draw do
   constraints(Subdomain) do  
     resource :landing, only: "show", path: "/" do
       member do
-        get '/:id' => "landings#show"
+        get '/:id' => "landings#show", as: :full
       end
     end
   end
 
-  root 'site#home'
 
   resources :items
   resources :categories
@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     root 'board#index'
     resources :items
     resources :categories
+    resources :landings
   end
 
   devise_for :users

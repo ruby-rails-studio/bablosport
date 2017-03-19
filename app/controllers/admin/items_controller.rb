@@ -73,7 +73,7 @@ class Admin::ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:slug, :name, :description, :url, :ref_url, :cover, :icon, :is_published, :category_id)
+      params.require(:item).permit( :title, :description, :facebook_image, :twitter_imag, :slug, :name, :description, :url, :ref_url, :cover, :icon, :is_published, :category_id)
     end
 
   def is_admin!

@@ -2,7 +2,7 @@
 lock "3.8.0"
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-# set :linked_files, %w{db/production.sqlite3}
+append :linked_files, "db/production.sqlite3"
 
 server '195.161.114.138', roles: [:web, :app, :db], primary: true
 

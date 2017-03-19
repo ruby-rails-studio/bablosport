@@ -14,6 +14,7 @@
         - Category.all.each do |item|
           = active_link_to item.name, admin_category_path(item), active: :exclusive, wrap_tag: 'li'
         = active_link_to "Добавить категорию", new_admin_category_path, active: :exclusive, wrap_tag: 'li'
+        = active_link_to "Лендинги", admin_landings_path, active: :exclusive, wrap_tag: 'li'
 
       %ul.nav.navbar-nav.navbar-right
         %li
