@@ -1,3 +1,8 @@
+User.delete_all
+User.create!([
+  	{ email: 'admin@bablosport.ru', password: "password"}, 
+])
+
 Category.delete_all
 Category.create!([
   	{ name: 'Букмекерские конторы', root: true}, 
