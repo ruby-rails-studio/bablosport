@@ -2,8 +2,13 @@
 %html
   %head
 
-    %title Bablosport
+    %title
+      = yield(:title) 
+      | 
+      Ставки на спорт, прогнозы, статьи, стратегии, блоги участников и многое другое
     
+    %meta{:content => "", :name => "Bablosport - сайт о заработке в сети. Ставки на спорт, прогнозы, статьи, стратегии, блоги участников"}/
+
     %meta{:content => "summary", :name => "twitter:card"}/
     %meta{:content => "@bjsmth", :name => "twitter:site"}/
     %meta{:content => "Bablosport - сайт о заработке в сети", :name => "twitter:title"}/
@@ -20,6 +25,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
   %body
     = render 'site/parts/navbar'
     %br/
