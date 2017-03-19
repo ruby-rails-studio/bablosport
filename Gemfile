@@ -76,4 +76,3 @@ end
 
 gem 'capistrano-rails-db'
 gem 'font-awesome-rails'
-gem 'sitemap'
