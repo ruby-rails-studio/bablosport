@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   get 'rating'   => 'site#rating'
   get 'about'    => 'site#about'
-  get 'l/:id'    => 'items#show', as: :short_link
+  get 'i/:id'    => 'items#show', as: :short_link
+
   get 'lp/:id'   => 'landings#show'
+
+  get 'r', to: 'site#rating', constraints: { subdomain: 'admin' }
 
   resources :items
   resources :categories
