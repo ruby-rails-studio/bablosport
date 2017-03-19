@@ -11,9 +11,9 @@ Category.create!([
 
 Item.delete_all
 Item.create!([
-  	{ name: 'Leon', category_id: 1, is_published: true},
-  	{ name: 'Лига ставок', category_id: 1, is_published: true},
-  	{ name: 'Winline', category_id: 1, is_published: true},
-  	{ name: '1xСтавка', category_id: 1, is_published: true},
-  	{ name: 'Фонбет', category_id: 1, is_published: true}
+  	{ name: 'Leon', category_id: 1, is_published: true, slug: "leon"},
+  	{ name: 'Лига ставок', category_id: 1, is_published: true, slug: "liga-stavok"},
+  	{ name: 'Winline', category_id: 1, is_published: true, slug: "winline"},
+  	{ name: '1xСтавка', category_id: 1, is_published: true, slug: "1xbet"},
+  	{ name: 'Фонбет', category_id: 1, is_published: true, slug: "fonbet" }
 ])
