@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title Bablo
+    
+    %meta{:content => "summary", :name => "twitter:card"}/
+    %meta{:content => "@flickr", :name => "twitter:site"}/
+    %meta{:content => "Small Island Developing States Photo Submission", :name => "twitter:title"}/
+    %meta{:content => "View the album on Flickr.", :name => "twitter:description"}/
+    %meta{:content => "https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg", :name => "twitter:image"}/
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'site/parts/navbar'
+    %br/
+    %br/
+    %br/
+
+    .container
+      = render 'site/widgets/top'
+
+      .row
+        .col-md-9
+          = yield
+        .col-md-3
+          = render 'site/parts/menu'
+    %footer.footer
+      .container
+        %p.text-muted Place sticky footer content here.

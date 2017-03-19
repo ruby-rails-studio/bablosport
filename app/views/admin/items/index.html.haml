@@ -1,0 +1,6 @@
+.row
+  - @items.each do |item|
+    .col-md-4
+      .panel.panel-default
+        .panel-body
+          = link_to item.name, admin_item_path(item)

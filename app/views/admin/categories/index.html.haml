@@ -1,0 +1,4 @@
+- @categories.each do |category|
+  = link_to category.name, admin_category_path(category)
+
+= link_to "Добавить категорию", new_admin_category_path

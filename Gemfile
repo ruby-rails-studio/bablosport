@@ -57,5 +57,8 @@ gem 'pry-rails'
 gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'active_link_to'
+gem 'friendly_id'
 
 gem 'devise'
+gem 'carrierwave'
