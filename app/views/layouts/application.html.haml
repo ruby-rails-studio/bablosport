@@ -1,7 +1,8 @@
 !!!
 %html
   %head
-    %title Bablo
+
+    %title Bablosport
     
     %meta{:content => "summary", :name => "twitter:card"}/
     %meta{:content => "@bjsmth", :name => "twitter:site"}/
@@ -24,7 +25,7 @@
     %br/
     %br/
     %br/
-
+    %br/
     .container
       = render 'site/widgets/top'
 
@@ -33,6 +34,16 @@
           = yield
         .col-md-3
           = render 'site/parts/menu'
+
     %footer.footer
       .container
-        %p.text-muted Place sticky footer content here.
+        .row
+          .col-md-8
+            = link_to "https://www.facebook.com/groups/bablosport/", target: "_blank", class: "btn btn-default" do
+              = fa_icon "facebook-official"
+            = link_to "http://telegram.me/bablosport", class: "btn btn-default", target: "_blank" do
+              = fa_icon "telegram"
+            = link_to "https://www.instagram.com/bablosport_site", target: "_blank", class: "btn btn-default" do
+              = fa_icon "instagram"
+          .col-md-4
+            %p.text-muted 2017 Bablosport.ru - Сайт о ставках на спорт
