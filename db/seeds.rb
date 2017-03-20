@@ -5,8 +5,7 @@ User.create!([
 
 Category.delete_all
 Category.create!([
-  	{ name: 'Букмекерские конторы', root: true, id: 1}, 
-  	{ name: 'Покер-румы',  root: true }
+  	{ name: 'Букмекерские конторы', root: true, id: 1}
 ])
 
 Item.delete_all

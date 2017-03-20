@@ -63,7 +63,7 @@ class Admin::LandingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def landing_params
-      params.require(:landing).permit(:description, :slug, :name, :item_id, :code, :css_file, :js_file, :is_published)
+      params.require(:landing).permit(:twitter_image, :facebook_image, :description, :slug, :name, :item_id, :code, :css_file, :js_file, :is_published)
     end
 
 

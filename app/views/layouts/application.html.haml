@@ -37,7 +37,9 @@
       = render 'site/widgets/top'
 
       .row
-        .col-md-9
+        .col-md-3
+          = render 'site/widgets/sidebar'
+        .col-md-6
           = yield
         .col-md-3
           = render 'site/parts/menu'

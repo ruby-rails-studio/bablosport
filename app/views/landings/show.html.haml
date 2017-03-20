@@ -1,17 +1,17 @@
 !!!
 %html
   %head
-    %title= @landing.name
+    %title= @landing.title
     
     %meta{:content => "summary", :name => "twitter:card"}/
     %meta{:content => "@bjsmth", :name => "twitter:site"}/
-    %meta{:content => "Bablosport - сайт о заработке в сети", :name => "twitter:title"}/
-    %meta{:content => "Каталог сайтов, блоги участников и многое другое", :name => "twitter:description"}/
-    %meta{:content => "http://static3.depositphotos.com/1000441/196/i/950/depositphotos_1967582-stock-photo-big-pile-of-the-money.jpg", :name => "twitter:image"}/
+    %meta{:content => "#{@landing.title}", :name => "twitter:title"}/
+    %meta{:content => "#{@landing.description}",   :name => "twitter:description"}/
+    %meta{:content => "#{@landing.twitter_image}", :name => "twitter:image"}/
 
-    / = csrf_meta_tags
-    / = stylesheet_link_tag    "#{@landing.css_file}", media: 'all'
-    / = javascript_include_tag "#{@landing.js_file}",
+    = stylesheet_link_tag    "#{@landing.css_file}", media: 'all'
+    = javascript_include_tag "#{@landing.js_file}"
+
   %body
     = raw @landing.code
   
