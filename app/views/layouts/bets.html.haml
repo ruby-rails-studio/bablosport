@@ -37,12 +37,10 @@
       = render 'site/widgets/top'
 
       .row
-        .col-md-3.hidden-xs
-          = render 'site/widgets/sidebar'
-        .col-md-6.col-xs-12
+        .col-md-12
           = yield
-        .col-md-3.hidden-xs
-          = render 'site/parts/menu'
+        / .col-md-3
+        /   = render 'site/parts/menu'
 
     %footer.footer
       .container

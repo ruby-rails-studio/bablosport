@@ -16,16 +16,13 @@
           = active_link_to item.name, short_link_path(item), active: :exclusive, :wrap_tag => "li"
 
       %ul.nav.navbar-nav.navbar-right
+        / = active_link_to "Мои ставки", bets_path, active: :exclusive, :wrap_tag => "li"
         - if signed_in?
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               = current_user.email
               %span.caret
             %ul.dropdown-menu
-              %li
-                %a{:href => "#"} Action
-              %li
-                %a{:href => "#"} Another action
               %li
                 %a{:href => "#"} Something else here
               %li.divider{:role => "separator"}

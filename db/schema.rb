@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319195643) do
+ActiveRecord::Schema.define(version: 20170320124818) do
+
+  create_table "bets", force: :cascade do |t|
+    t.decimal  "value"
+    t.decimal  "gain"
+    t.integer  "user_id"
+    t.text     "description"
+    t.string   "event"
+    t.string   "event_type"
+    t.boolean  "is_finish",   default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["user_id"], name: "index_bets_on_user_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"

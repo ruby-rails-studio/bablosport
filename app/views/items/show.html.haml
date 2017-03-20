@@ -1,6 +1,6 @@
 =  provide(:title, @item.name )
 
-.page-header
+.page
   %h1= @item.name
   - @item.landings.each do |lp|
     / = link_to lp.name, landing_path(lp), target: "_blank"
