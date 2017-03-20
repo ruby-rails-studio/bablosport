@@ -77,3 +77,5 @@ end
 gem 'capistrano-rails-db'
 gem 'font-awesome-rails'
 gem 'ace-rails-ap'
+gem 'forgery'
+gem 'masonry-rails'

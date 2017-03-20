@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'site#home'
+  # root 'site#home'
+  root 'board#index'
 
   get 'rating'   => 'site#rating'
   get 'about'    => 'site#about'

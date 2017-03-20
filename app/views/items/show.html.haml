@@ -1,9 +1,16 @@
 =  provide(:title, @item.name )
 
-.page
-  %h1= @item.name
-  - @item.landings.each do |lp|
-    / = link_to lp.name, landing_path(lp), target: "_blank"
 
-%p
-  = raw @item.description
+:scss
+  .jumbotron {
+    background-image: url("http://localhost:3000/leon.jpg");
+    min-height: 250px;
+  }
+
+.jumbotron
+  %h1= @item.name
+  
+.container-fluid
+  %p
+    = raw @item.description
+    / = Forgery(:lorem_ipsum).words(2000)

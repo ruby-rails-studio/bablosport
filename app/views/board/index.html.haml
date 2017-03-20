@@ -1,0 +1,45 @@
+.container-fluid
+  .row
+    .col-md-4.site-brand
+      %h1 BABLOSPORT.ru
+    .col-md-8.pt-25
+
+  %hr
+
+  .row
+    .col-md-8
+      .news_card
+        .news_card_image
+          = image_tag "/test.jpg"
+        .news_card_body
+          .news_card_title
+            За линией огня
+          .news_card_description
+            / = Forgery(:lorem_ipsum).words(20)
+            Скандальный Фуркад, серебряный Шипулин и другие итоги сезона в биатлоне
+          .news_card_content
+
+
+
+    .col-md-4
+      .row
+        .col-md-12
+          .news_card
+            .news_card_body
+              .news_card_description
+                = Forgery(:lorem_ipsum).words(20)
+        .col-md-12
+          .news_card
+            .news_card_body
+              .news_card_description
+                = Forgery(:lorem_ipsum).words(20)
+        .col-md-12
+          .news_card
+            .news_card_body
+              .news_card_description
+                = Forgery(:lorem_ipsum).words(20)
+        .col-md-12
+          .news_card
+            .news_card_body
+              .news_card_description
+                = Forgery(:lorem_ipsum).words(15)

@@ -12,6 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  */
 
 @import "font-awesome";
@@ -19,9 +26,11 @@
 @import "bootstrap";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Slab', serif !important;
+  font-family: 'PT Sans Caption', sans-serif;
 }
 
 /* Sticky footer styles
