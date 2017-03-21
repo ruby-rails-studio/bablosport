@@ -12,14 +12,14 @@
 
 # Разработка
 
-  ' $ bundle
-  ' $ rake db:migrate
-  ' $ rails s
+  ` $ bundle
+  ` $ rake db:migrate
+  ` $ rails s
 
 # Деплой
 
-  ' $ cap production deploy 
-  ' $ cap production deploy:db:seed # Заполнить базу
+  ` $ cap production deploy 
+  ` $ cap production deploy:db:seed # Заполнить базу
 
 
 

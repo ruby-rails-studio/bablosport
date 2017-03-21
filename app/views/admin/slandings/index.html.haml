@@ -1,0 +1,5 @@
+- @landings.each do |lp|
+  .panel.panel-default
+    .panel-body
+      = link_to lp.name, edit_admin_landing_path(lp)
+      = link_to "Посмотреть", full_landing_url(lp, :subdomain => "lp"), target: "_blank"
